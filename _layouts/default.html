@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="oclockvn">
 
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="{{ '/css/highlighter.css' | relative_url }}" />    
@@ -11,14 +12,16 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
 
     <title>PTQ | {{ page.title }}</title>
+    {% if jekyll.environment == 'production' %}
     {% include analytics.html %}
+    {% endif %}
   </head>
   <body>
 
     <header class="header">
 
       <nav class="nav center">
-        <a href="{{ site.url }}" class="brand">Quang Phan</a>
+        <a href="{{ site.url }}" class="brand">{{ site.title }}</a>
       </nav>
 
     </header>
@@ -28,7 +31,7 @@
     </main>
 
     <footer class="footer">
-      <div class="center">&#64; 2019 <a href="{{ site.url }}">Quang Phan</a></div>
+      <div class="center">&#64; 2019 <a href="{{ site.url }}">{{ site.title }}</a></div>
     </footer>
 
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
