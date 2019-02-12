@@ -18,6 +18,13 @@ layout: default
         <!-- </div> -->
     </div>
 
+    <div class="post__share">
+        <h4 class="share__title">Share This</h4>
+        <div class="share__links">
+            {% include shared.html %}
+        </div>
+    </div>
+
     {% unless page.disable_comment %}
         <div class="post__comment">
             <div class="center">
