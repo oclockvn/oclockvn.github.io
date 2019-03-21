@@ -15,60 +15,11 @@ irb
 
 ### Scope
 
-```rb
-class Scope
-
-#starts with $
-$global_scope = "/app" #available anywhere
-
-#starts with @@
-@@same_class_scope = 1 #available across class instances
-
-def local_scope
-  #local variable starts with lowercase or underscore _
-  loval_var = 10 #only available to this method
-end
-
-def class_scope
-  #class variable starts with @
-  @name = 'Ruby' #available to this class
-end
-
-def set_scope(num)
-  @@same_class_scope = num
-end
-
-def print_scope
-  puts @@same_class_scope
-end
-
-end
-
-s1 = Scope.new
-s2 = Scope.new
-
-s1.print_scope #=> 1
-s2.set_scope(2) #all instances of Scope class will update scope
-
-s1.print_scope #=> 2
-s2.print_scope #=> 2
-```
+<script src="https://gist.github.com/oclockvn/b07865b3f8a9ee246ad7c25d2fcb3cb0.js"></script>
 
 ### String
 
-```rb
-s1 = "Hello"
-s2 = "World"
-
-s3 = "#{s1} Ruby #{s2}" #=> "Hello Ruby World"
-s1.length #=> 5
-s1[2] #=> l
-s1.split 'e' #=> ["H", "llo"]
-
-s1.downcase #=> "hello"
-s1.upcase #=> "HELLO"
-'hELLo'.capitalize #=> "Hello"
-```
+<script src="https://gist.github.com/oclockvn/3411abf60ec7524be712fcbd7eb315ad.js"></script>
 
 ### Symbols
 
@@ -87,36 +38,7 @@ This_is_still_valid = true
 
 ### Array
 
-```rb
-lang = ['english', 'vietnamese', 'french', 'japanese'] # = Array.new
-
-lang.length #=> 4
-lang.size #=> 4
-
-lang.first #=> "english"
-lang.last #=> "japanese"
-
-#adding item
-lang.push("chinese")
-lang << "chinese"
-lang[4] = "chinese"
-
-#select item
-
-res = lang.select do |l|
-  l =~ /h/ #search the character 'h' in l
-end
-
-res = lang.select { |x| x =~ /h/ } #same as above
-
-res.grep(/h/) #same as above
-
-#=> ["english", "french"]
-
-#delete item
-lang.delete('chinese')
-lang.delete_at(3)
-```
+<script src="https://gist.github.com/oclockvn/411eb24c6f8cb06d2d7a9662e2af2e60.js"></script>
 
 ### Regex
 
@@ -128,137 +50,31 @@ lang.delete_at(3)
 
 > .NET Dictionary
 
-```rb
-obj = Hash.new
-#or
-obj = {
-    "old_syntax" => 'value 1',
-    :old_syntax_too => "value 2",
-    new_syntax: "value 3"
-}
-
-obj[:assign_sym] = 123
-
-#get value
-obj[:new_syntax] #=> "value 3"
-```
+<script src="https://gist.github.com/oclockvn/727a0e35c9c4c65ed625987b0e007b46.js"></script>
 
 ### Methods
 
 > method name should be in convention
 
-```rb
-def is_even?(val) #method name ends with `?` return boolean
-  val % 2 == 0
-end
-
-def add_val(x, y)
-  x + y #return at last statement
-end
-
-is_even? 2 #no need the `()`
-a = add_val(1, 2) #a = 3
-```
+<script src="https://gist.github.com/oclockvn/6c2eccf43ea055f7b5c59820b1cc4709.js"></script>
 
 ### Class
 
-```rb
-class People #class name must starts with uppercase letter
-  def initialize(name, age)
-    @name = name
-    @age = age
-  end
-
-  def say
-    puts "Hello, I'm #{@name}, #{@age} yrs old"
-  end
-
-  def self.static_method #static method self.method_name
-    puts "I'm static"
-  end
-
-  def to_s #override base Object class
-    return "#{@name} #{@age} yrs old"
-  end
-end
-
-p = People.new('dev', 18)
-p.say #=> "Hello, I'm dev, 18 yrs old"
-p.to_s #=> "dev 18 yrs old"
-People.static_method #=> "I'm static"
-
-```
+<script src="https://gist.github.com/oclockvn/7a2de1bf798fe6bb1b366e0eb4a6f09c.js"></script>
 
 ### Class accessor (attributes)
 
-```rb
-class Student
-
-  def id #getter
-    @id
-  end
-
-  def id=(value) #setter
-    @id = value
-  end
-end
-
-class Employee
-  attr_accessor :id
-  attr_reader :name
-  attr_writer :age
-
-  def hello
-    puts "Hello I'm #{@name}" #use @
-    puts "I'm #{self.age} yrs old" #use self.
-  end
-end
-```
+<script src="https://gist.github.com/oclockvn/0ef729c096deb48e23253c103c716260.js"></script>
 
 ### Inheritance
 
-```rb
-class People
-  #public by default
-  def say
-  end
-
-  protected #all below are protected (until private)
-  def say_child
-  end
-
-  private #all below are private
-  def say_secret
-  end
-end
-
-class Worker < People #inherit by < symbol
-  #can invoke say and say_child
-end
-```
+<script src="https://gist.github.com/oclockvn/ce2e0a78f03a0804c7a92dea559a794e.js"></script>
 
 ### Modules
 
 > Think about namespace in .NET
 
-```rb
-module Worker #define a module
-  def chop
-    puts "timber"
-  end
-
-  class VNWorker
-    
-  end
-end
-
-class Engineer < Worker::VNWorker #access class inside module
-  include Worker
-end
-
-en = Engineer.new
-en.chop #=> "timber"
-```
+<script src="https://gist.github.com/oclockvn/f147de44f4d2cfdb1d8281919ef6d1cf.js"></script>
 
 - Module cannot be instantiated  
 - Cannot inherit or be derived from  
@@ -266,29 +82,7 @@ en.chop #=> "timber"
 
 ### Conditional statement
 
-```rb
-#if else unless
-ruby_is_awesome = true
-
-if ruby_is_awesome
-  puts "Ruby is awesome"
-end
-
-puts "Ruby is awesome" if ruby_is_awesome
-
-unless ruby_is_awesome == false
-  puts "Wassup"
-end
-
-#case
-lang :ruby
-
-case lang
-  when :ruby then puts "Oh well"
-  when :dotnet then puts "Uhh uh"
-    else puts "Nah"
-end
-```
+<script src="https://gist.github.com/oclockvn/303cd734c47f873ce181829c5912aeec.js"></script>
 
 ### Loop and iterator
 

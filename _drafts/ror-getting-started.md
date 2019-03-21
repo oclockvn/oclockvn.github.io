@@ -1,3 +1,8 @@
+---
+title: "Rails getting started"
+tags: ["rails"]
+---
+
 ### New proj
 
 ```
