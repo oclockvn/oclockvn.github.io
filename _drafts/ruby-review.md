@@ -3,7 +3,7 @@ title: "Ruby review"
 tags: ["ruby"]
 ---
 
-### Ruby REPL Read-Eval-Printloop
+### Ruby REPL Read-Eval-Print-Loop
 
 turn your cmd into ruby interactive
 
@@ -78,10 +78,23 @@ s1.upcase #=> "HELLO"
 sim = :a_simple
 ```
 
+### Constant
+
+```rb
+CONSTANT_STARTS_WITH_UPPERCASE_LETTER = "A"
+This_is_still_valid = true
+```
+
 ### Array
 
 ```rb
-lang = ['english', 'vietnamese', 'french', 'japanese']
+lang = ['english', 'vietnamese', 'french', 'japanese'] # = Array.new
+
+lang.length #=> 4
+lang.size #=> 4
+
+lang.first #=> "english"
+lang.last #=> "japanese"
 
 #adding item
 lang.push("chinese")
@@ -135,23 +148,22 @@ obj[:new_syntax] #=> "value 3"
 > method name should be in convention
 
 ```rb
-def is_even?(val) #method name ends with `?`
+def is_even?(val) #method name ends with `?` return boolean
   val % 2 == 0
 end
 
-def add_val!(x, y) #method name ends with `!`
+def add_val(x, y)
   x + y #return at last statement
 end
 
 is_even? 2 #no need the `()`
-a = 0;
-a.add_val!(1, 2) #a = 3 (auto assign)
+a = add_val(1, 2) #a = 3
 ```
 
 ### Class
 
 ```rb
-class People
+class People #class name must starts with uppercase letter
   def initialize(name, age)
     @name = name
     @age = age
@@ -175,4 +187,180 @@ p.say #=> "Hello, I'm dev, 18 yrs old"
 p.to_s #=> "dev 18 yrs old"
 People.static_method #=> "I'm static"
 
+```
+
+### Class accessor (attributes)
+
+```rb
+class Student
+
+  def id #getter
+    @id
+  end
+
+  def id=(value) #setter
+    @id = value
+  end
+end
+
+class Employee
+  attr_accessor :id
+  attr_reader :name
+  attr_writer :age
+
+  def hello
+    puts "Hello I'm #{@name}" #use @
+    puts "I'm #{self.age} yrs old" #use self.
+  end
+end
+```
+
+### Inheritance
+
+```rb
+class People
+  #public by default
+  def say
+  end
+
+  protected #all below are protected (until private)
+  def say_child
+  end
+
+  private #all below are private
+  def say_secret
+  end
+end
+
+class Worker < People #inherit by < symbol
+  #can invoke say and say_child
+end
+```
+
+### Modules
+
+> Think about namespace in .NET
+
+```rb
+module Worker #define a module
+  def chop
+    puts "timber"
+  end
+
+  class VNWorker
+    
+  end
+end
+
+class Engineer < Worker::VNWorker #access class inside module
+  include Worker
+end
+
+en = Engineer.new
+en.chop #=> "timber"
+```
+
+- Module cannot be instantiated  
+- Cannot inherit or be derived from  
+- Can contains classes, methods, attributes and sub modules
+
+### Conditional statement
+
+```rb
+#if else unless
+ruby_is_awesome = true
+
+if ruby_is_awesome
+  puts "Ruby is awesome"
+end
+
+puts "Ruby is awesome" if ruby_is_awesome
+
+unless ruby_is_awesome == false
+  puts "Wassup"
+end
+
+#case
+lang :ruby
+
+case lang
+  when :ruby then puts "Oh well"
+  when :dotnet then puts "Uhh uh"
+    else puts "Nah"
+end
+```
+
+### Loop and iterator
+
+> built-in loop: `for`, `while` and `until`
+
+```rb
+lang = ["c#", "ruby", "js", "java"]
+
+#for
+for x in lang
+  puts x
+end
+
+#while
+@x = 5
+while @x > 0
+  @x -= 1
+end
+
+#until
+until @x > 10
+  @x += 1
+end
+```
+
+> Iterator: `each`, `times`, `upto` and `downto`
+
+```rb
+#each
+lang.each do |x|
+  puts x
+end
+
+#or
+lang.each { |x| puts x }
+
+#times
+3.times do |x|
+  puts "#{x} time"
+end
+```
+
+### Exception handling
+
+```rb
+begin
+  x = 1 / 0
+rescue ZeroDivisionError
+  puts "Div by 0"
+rescue Exception => e
+  puts e.message
+ensure
+  puts "finally"
+end
+
+#raise exception
+begin
+  raise "throw an exception"
+rescue
+end
+```
+
+**Define custom exception**
+
+```rb
+class CustomException < StandardException
+  attr_reader :msg
+
+  def initialize(msg)
+    @msg = msg
+  end
+end
+
+raise CustomException.new("custom error")
 ```
