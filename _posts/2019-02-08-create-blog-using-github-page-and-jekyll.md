@@ -65,3 +65,20 @@ Tips:
 {{ site.baseurl }}{% post_url yyyy-MM-dd-name-of-the-post %}
 ```
 {% endraw %}
+
+- Insert assets
+
+{% raw %}
+```
+![asset description](\assets\img\file-name.png)
+```
+{% endraw %}
+
+- Ignore jekyll compile
+
+{% raw %}
+```
+raw
+endraw
+```
+{% endraw %}
