@@ -82,3 +82,11 @@ raw
 endraw
 ```
 {% endraw %}
+
+- Production build
+
+```
+JEKYLL_ENV=production jekyll build
+```
+
+or you can setup an automation build at [docs](https://jekyllrb.com/docs/github-pages/)
