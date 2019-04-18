@@ -48,6 +48,12 @@ cd src
 jekyll serve --watch
 ```
 
+with drafts
+
+```
+jekyll s --drafts
+```
+
 app is available at `http://localhost:4000/`
 
 ### 4. Configuration
