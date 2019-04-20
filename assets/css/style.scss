@@ -167,7 +167,10 @@ code {
 
     > :not(pre) {
         @extend %center;
+    }
 
+    > table {
+        display: table !important;
     }
 
     ul, ol {
@@ -183,6 +186,44 @@ code {
     img {
         border: 1px solid rgba(0, 0, 0, 0.04);        
         max-width: 100%;
+    }
+}
+
+table {    
+    border-collapse: collapse;
+    border: none;
+    width: 100%;
+    display: table !important;
+
+    td, th {
+        border-bottom: 1px solid #eee;
+        padding: .5rem;
+    }
+
+    tr:nth-child(even) td {
+        background: #eee;
+    }
+}
+
+blockquote {
+    color: #e83e8c;
+    padding: 1rem;
+    padding-left: 1.5rem !important;
+    width: 100%;
+    background: rgba(232, 62, 140, 0.05);
+    position: relative;
+
+    p:last-child {
+        margin: 0;
+    }
+
+    &:before {
+        content: '\275D';
+        float: left;
+        font-size: 3em;
+        position: absolute;
+        left: 0;
+        line-height: 0;
     }
 }
 
