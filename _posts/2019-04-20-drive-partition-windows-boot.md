@@ -56,7 +56,7 @@ So basically, if you want to use UEFI mode, then your drive must be a `Gpt` part
 
 Boot mode | Partition
 --- | ---
-EDFI | GPT
+UEFI | GPT
 Legacy/Bios | MBR
 
 ### 3. Create UEFI usb boot
