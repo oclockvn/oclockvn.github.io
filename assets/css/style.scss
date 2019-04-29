@@ -72,6 +72,8 @@ body {
         font-size: 1.5rem;
         color: #000;
         text-decoration: none;
+        word-break: break-all;
+        word-break: break-word;
 
         &:hover {
             color: #fff;
@@ -240,3 +242,5 @@ blockquote {
 
 @import "icon.scss";
 @import "shared.scss";
+@import "pagination.scss";
+@import "post.scss";
