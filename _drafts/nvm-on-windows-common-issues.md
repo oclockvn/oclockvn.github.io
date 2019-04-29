@@ -35,4 +35,20 @@ mkdir nvm
 nvm root C:\nodejs\nvm
 ```
 
+After moving the root directory, you may face the issue:
+
+```
+exec: "C:\\nodejs\\nvm\\elevate.cmd": file does not exist
+```
+
+To fix this, just copy all the files from old root to new root.
+
+You old root might be:
+
+```
+C:\Users\<username>\AppData\Roaming\nvm
+# or 
+%AppData%\nvm
+```
+
 Done! You're good to go.
