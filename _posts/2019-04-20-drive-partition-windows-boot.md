@@ -46,7 +46,7 @@ convert mbr # to convert from Gpt -> Mbr
 convert gpt # to convert from Mgr -> Gpt
 ```
 
-All done. You can exit the cmd to continue on your setup.
+All done. You can exit the cmd to continue with your setup.
 
 ### 2. Legacy vs UEFI
 
