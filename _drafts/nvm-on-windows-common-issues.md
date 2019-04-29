@@ -6,16 +6,16 @@ author: Quang Phan
 
 [nvm](https://github.com/coreybutler/nvm-windows) node version manager for Windows
 
-1. Install notes
+### 1. Install notes
 
 You should:
 
-1\. Uninstall nodejs first
+1\. Uninstall nodejs first  
 2\. Delete the node install folder Program Files\nodejs and npm folder %AppData%\npm
 
 > %AppData% usually is C:\Users\<username>\AppData\Roaming
 
-2. Install nvm
+### 2. Install nvm
 
 Download link above.
 
@@ -43,7 +43,7 @@ exec: "C:\\nodejs\\nvm\\elevate.cmd": file does not exist
 
 To fix this, just copy all the files from old root to new root.
 
-You old root might be:
+Your old root might be:
 
 ```
 C:\Users\<username>\AppData\Roaming\nvm
