@@ -7,13 +7,13 @@ title: Simple man. Simple code. Simple life.
 ---
 
 <div class="posts">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
     <div class="post-entry">
         <div class="center">
             <div class="entry-content">
                 <div class="entry__meta">
                     <span class="post__date">{{ post.date | date_to_string }}</span>
-                    {% assign t = post.tags | array_to_sentence_string %}                    
+                    {% assign t = post.tags | array_to_sentence_string %}
                     {% if t != '' %}
                         <span class="meta-separator"></span>
                         <span class="tags">
@@ -30,4 +30,19 @@ title: Simple man. Simple code. Simple life.
         </div>
     </div>
     {% endfor %}
+</div>
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="pager prev">
+      Previous
+    </a>
+  {% endif %}
+  <span class="pager number">
+    {{ paginator.page }} of {{ paginator.total_pages }}
+  </span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="pager next">Next</a>
+  {% endif %}
 </div>
