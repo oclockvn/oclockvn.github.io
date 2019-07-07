@@ -12,7 +12,7 @@ jekyll serve --watch
 
 to serve the drafts, add option `--drafts`.
 
-There is another way to start server:
+There is another way to start the server:
 
 ```
 bundle exec jekyll serve --watch --drafts
