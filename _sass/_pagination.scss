@@ -6,16 +6,22 @@
 
   .pager {
     display: block;
-    flex: 1;
     text-align: center;
-    padding: 2em;
     margin: 0;
     text-decoration: none;
-    font-size: 1.2em;
     text-transform: uppercase;
     color: #fff;
-    transition: .25s ease-in-out;
-    position: relative;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    z-index: 999;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.6);
+    background: #000;
+    top: 50%;
 
     &.number {
       text-transform: lowercase;
@@ -40,19 +46,11 @@
     }
 
     &.next {
-      &:after {
-        content: '\2192';
-        right: 1rem;
-        transform: translateX(-100%);
-      }
+      right: 8px;
     }
 
     &.prev {
-      &:after {
-        content: '\2190';
-        left: 1rem;
-        transform: translateX(100%);
-      }
+      left: 8px;
     }
 
     &:hover {

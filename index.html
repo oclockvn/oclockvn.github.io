@@ -35,14 +35,10 @@ title: Simple man. Simple code. Simple life.
 <!-- Pagination links -->
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="pager prev">
-      Previous
-    </a>
+    <a href="{{ paginator.previous_page_path }}" class="pager prev" title="page {{ paginator.page }} of {{ paginator.total_pages }}">&leftarrow;</a>
   {% endif %}
-  <span class="pager number">
-    {{ paginator.page }} of {{ paginator.total_pages }}
-  </span>
+
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="pager next">Next</a>
+    <a href="{{ paginator.next_page_path }}" class="pager next" title="page {{ paginator.page }} of {{ paginator.total_pages }}">&rightarrow;</a>
   {% endif %}
 </div>
