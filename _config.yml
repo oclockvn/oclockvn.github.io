@@ -36,6 +36,7 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-seo-tag
 excerpt_separator: <!--more-->
 defaults:
   -
