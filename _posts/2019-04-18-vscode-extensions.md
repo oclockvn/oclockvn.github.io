@@ -1,6 +1,8 @@
 ---
 title: VsCode extensions
 tags: ["vscode"]
+author: Quang Phan
+description: vscode extensions tips
 ---
 
 There is an extension already [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)

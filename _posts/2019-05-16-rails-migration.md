@@ -1,7 +1,8 @@
 ---
 title: Rails migration
-author: Quang Phan
 tags: [rails]
+author: Quang Phan
+description: rails migration
 ---
 
 ### Generate migration

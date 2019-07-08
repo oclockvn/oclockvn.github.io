@@ -1,6 +1,8 @@
 ---
 title: "Using Umbraco. Thinking in Umbraco's way!"
 tags: ["umbraco"]
+author: Quang Phan
+description: umbraco getting started
 ---
 
 "**The friendliest CMS community on the planet**" - đấy là người ta bảo thế. Ờ thì mình thấy cũng đúng thiệt. Mọi thứ của nó đều thân thiện và dễ sử dụng.

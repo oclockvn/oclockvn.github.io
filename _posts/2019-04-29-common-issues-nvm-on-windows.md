@@ -2,6 +2,7 @@
 title: common issues when using nvm on Windows
 tags: [windows]
 author: Quang Phan
+description: common issues with nvm on windows
 ---
 
 [nvm](https://github.com/coreybutler/nvm-windows) node version manager for Windows

@@ -1,6 +1,8 @@
 ---
 title: Create static blog using github pages
-tags: [git, tip, ha ha ha]
+tags: [git, tip]
+author: Quang Phan
+description: create blog with jekyll and github pages
 ---
 
 ### 1. Install ruby

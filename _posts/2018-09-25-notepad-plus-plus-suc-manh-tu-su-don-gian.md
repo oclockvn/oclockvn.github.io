@@ -1,6 +1,8 @@
 ---
 title: "Notepad++ Sức mạnh từ sự đơn giản"
 tags: ["tip"]
+author: Quang Phan
+description: notepad++ tus and trick
 ---
 
 Đối với các developer, hiện nay có rất nhiều sự lựa chọn cho 1 text editor. (Theo những gì mình biết và đã sử dụng trên Windows) Từ Sublime text, Atom, Brackets...cho tới Visual Studio Code. Tất cả đều hỗ trợ khá tốt do nhiều tính năng hữu ích cùng với bộ plugins đồ sộ. Tuy nhiên, Notepad++ vẫn là sự lựa chọn hàng đầu của mình. Vì sao? Nội dung bài viết này sẽ lý giải điều đó.

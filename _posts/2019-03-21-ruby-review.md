@@ -1,6 +1,8 @@
 ---
 title: "Ruby review"
 tags: ["ruby"]
+author: Quang Phan
+description: ruby sum up
 ---
 
 ### Ruby REPL Read-Eval-Print-Loop
