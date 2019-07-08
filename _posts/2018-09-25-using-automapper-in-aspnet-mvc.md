@@ -1,6 +1,8 @@
 ---
 title: "Sử dụng automapper trong asp.net mvc"
 tags: ["C#"]
+author: Quang Phan
+description: using automapper asp.net mvc 5
 ---
 
 ### Không còn "copy" nữa...

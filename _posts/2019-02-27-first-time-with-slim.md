@@ -1,6 +1,8 @@
 ---
 title: "First time with slim"
 tags: ["ror", "slim"]
+author: Quang Phan
+description: getting started with slim rails
 ---
 
 More details at [slim lang](http://slim-lang.com/)

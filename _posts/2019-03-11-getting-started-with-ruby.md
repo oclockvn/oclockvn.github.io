@@ -1,6 +1,8 @@
 ---
 title: "Getting started with Ruby"
 tags: ['ruby']
+author: Quang Phan
+description: getting started with ruby
 ---
 
 ### Basic data type

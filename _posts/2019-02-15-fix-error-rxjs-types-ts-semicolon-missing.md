@@ -1,6 +1,8 @@
 ---
 title: "Fix ERROR in node_modules/rxjs/internal/types.d.ts(81,44): error TS1005: ';' expected."
 tags: ["til"]
+author: Quang Phan
+description: node packages version error
 ---
 
 ### Error

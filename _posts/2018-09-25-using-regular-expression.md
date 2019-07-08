@@ -1,6 +1,8 @@
 ---
 title: "regular expression là 1 nghệ thuật, người sử dụng regular expression là 1 ...good coder"
 tags: ["C#"]
+author: Quang Phan
+description: regular expression for beginner
 ---
 
 

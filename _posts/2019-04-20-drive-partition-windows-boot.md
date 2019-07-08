@@ -2,6 +2,7 @@
 title: From Drive partition to Windows boot mode.
 author: ['Quang Phan']
 tags: ['tip', 'windows']
+description: windows boot mode. drive partition.
 ---
 
 **MBR**: Master Boot Record  

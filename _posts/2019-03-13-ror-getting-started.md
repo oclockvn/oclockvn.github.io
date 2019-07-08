@@ -1,6 +1,8 @@
 ---
 title: "Rails getting started"
 tags: ["rails"]
+author: Quang Phan
+description: getting started with rails
 ---
 
 ### New proj

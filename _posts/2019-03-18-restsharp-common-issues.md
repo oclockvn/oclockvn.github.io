@@ -1,6 +1,8 @@
 ---
 title: RestSharp common issues
 tags: ["C#"]
+author: Quang Phan
+description: restsharp common issues
 ---
 
 [RestSharp](https://github.com/restsharp/RestSharp) is a popular rest client in .net

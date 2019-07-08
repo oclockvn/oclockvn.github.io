@@ -1,6 +1,8 @@
 ---
 title: "Build and publish a package to nuget"
 tags: ["tip"]
+author: Quang Phan
+description: How to build and publish a nuget package
 ---
 
 ### 1. Of course you will need VS 

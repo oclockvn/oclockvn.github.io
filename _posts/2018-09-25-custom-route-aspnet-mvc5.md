@@ -1,6 +1,8 @@
 ---
 title: Custom routes in asp.net mvc 5
 tags: ["aspnet", "mvc5"]
+author: Quang Phan
+description: Easy steps to custom routing for asp.net mvc5 application
 ---
 
 Here I'll show you the new way to custom route via attribute in 2 steps (the old way is to register multiple `mapRoute`)

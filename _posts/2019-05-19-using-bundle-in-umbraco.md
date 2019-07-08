@@ -1,7 +1,8 @@
 ---
 title: Using ASP.NET bundle in Umbraco
-author: Quang Phan
 tags: [umbraco]
+author: Quang Phan
+description: umbraco bundling
 ---
 
 It's easy to setup bundle in Umbraco thru 5 steps

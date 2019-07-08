@@ -2,6 +2,7 @@
 title: Git useful commands
 author: Quang Phan
 tags: [git]
+description: useful git commands for your daily coding
 ---
 
 ### 1. Show latest commit on branches
