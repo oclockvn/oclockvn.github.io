@@ -21,7 +21,7 @@ bundle exec jekyll serve --watch --drafts
 ### Build your blog
 
 ```
-JEKYLL_ENV=production jekyll build
+jekyll build JEKYLL_ENV=production
 ```
 
 TIP: you can use `ENV['JEKYLL_ENV']` to get/set the env instead of `jekyll.environment` variable
