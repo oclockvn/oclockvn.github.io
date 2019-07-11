@@ -204,3 +204,11 @@ where index options are:
 unique: true/false
 name:   "your_custom_index_name"
 ```
+
+### Fix migration errors
+
+If you have issue when run migration, for example column already exist, you can use rails console to fix it:
+
+```
+ActiveRecord::Migration.remove_column :table_name, :column_name
+```
