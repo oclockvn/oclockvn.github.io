@@ -1,5 +1,6 @@
 ---
 title: Reset password of Windows Subsystem For Linux user
+description: Reset password of Windows Subsystem For Linux user
 author: Quang Phan
 tags: [wsl, linux]
 ---
