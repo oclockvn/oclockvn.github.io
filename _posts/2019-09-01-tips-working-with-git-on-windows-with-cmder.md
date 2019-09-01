@@ -35,11 +35,11 @@ cmder.exe /register ALL
 
 y hệt chrome, `Ctrl + T ` để mở tab mới, `Ctrl + W` để đóng tab, `Ctrl + {number}` để switch tab.
 
-![cmder tab](\assets\img\git-tip\cmder-tabs.jpg)
+![cmder tab](\assets\img\git-tips\cmder-tabs.jpg)
 
 ### 3. Cmder alias
 
-![cmder tab](\assets\img\git-tip\cmder-aliases.jpg)
+![cmder tab](\assets\img\git-tips\cmder-aliases.jpg)
 
 dùng `alias` để show all aliases và `alias {alias}={command}` để set alias. Sử dụng `alias /reload` để "kích hoạt" alias mà không cần đóng và mở lại cmder.
 
