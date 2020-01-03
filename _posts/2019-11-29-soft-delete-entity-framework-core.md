@@ -9,62 +9,19 @@ Soft delete means mark it as deleted, don't completely remove it from database (
 
 Say we have a simple database structure like below:
 
-```cs
-public class Category
-{
-    public int Id { get; set; }
-    public int Name { get; set; }
-
-    public ICollection<Product> Products { get; set; }
-}
-
-public class Product
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public decimal Price { get; set; }
-
-    public int CategoryId { get; set; }
-    public Category Category { get; set; }
-}
-```
+<script src="https://gist.github.com/oclockvn/c3054056ab3147bdcc67858f98c5e175.js"></script>
 
 here we have 2 tables and One to Many relationship. You can leave them and let EF handle the relationship for you as it uses naming convention.
 
 The db context should simple as well:
 
-```cs
-public class ApplicationDbContext : DbContext
-{
-    public DbSet<Product> Products { get; set; }
-    public DbSet<Category> Categories { get; set; }
-
-    // skip constructor for simplicity
-}
-```
+<script src="https://gist.github.com/oclockvn/9bafdb51ef2f3ebd779195c133bd2c12.js"></script>
 
 ### Enable soft delete entity
 
 Okay now let's add soft delete to our entity. I can add to each entity a property but I won't, let's keep it clean and DRY. So I'll create a base entity:
 
-```cs
-public class BaseEntity
-{
-    public int Id { get; set; }
-    public DateTime? DeletedAt { get; set; } // enable soft delete
-}
-
-public class Category : BaseEntity
-{
-    // remove Id from this class 
-    // as we've had it in base entity already
-}
-
-public class Product : BaseEntity
-{
-    // remove Id
-}
-```
+<script src="https://gist.github.com/oclockvn/d425eb2099e5d6d555fe6887abb9142d.js"></script>
 
 That's all. You can now imagine that if `DeletedAt` not null then it's deleted. You can also use bool or whatever fit your business.
 
@@ -72,126 +29,35 @@ That's all. You can now imagine that if `DeletedAt` not null then it's deleted. 
 
 Without doing anything else, you can query entities not deleted by a simple condition:
 
-```cs
-public class ProductService
-{
-    private readonly ApplicationDbContext db;
-
-    public ProductService(ApplicationDbContext db)
-    {
-        this.db = db;
-    }
-
-    public async Task<List<Product>> GetProductsAsync(decimal fromPrice)
-    {
-        return await db.Products
-            .Where(x => x.DeletedAt == null && x.Price >= fromPrice)
-            .ToListAsync();
-    }
-}
-```
+<script src="https://gist.github.com/oclockvn/e4262c7fffb3bbb68431d7e4e8bb834b.js"></script>
 
 but things getting complicated as you have to check `DeletedAt` prop all the time. See a complex long query below to just achieve a simple requirement - get product in a specific category:
 
-```cs
-public async Task<List<Product>> GetProductInCategoryAsync(string categoryName)
-{
-    // a complex query to show you how complicated thing getting
-    return await db.Categories
-        .Include(c => c.Products)
-        .Where(c => c.DeletedAt == null && c.Name == categoryName)
-        .SelectMany(x => x.Products)
-        .Where(p => p.DeletedAt == null)
-        .ToListAsync();
-
-    // or a simpler solution
-    // await db.Products
-    //     .Include(p => p.Category)
-    //     .Where(p => p.DeletedAt == null && 
-    //          x.Category.Deleted == null && 
-    //          x.Category.Name == categoryName)
-    //     .ToListAsync();
-}
-```
+<script src="https://gist.github.com/oclockvn/c9d452374d5d07b815257bc94d6d2870.js"></script>
 
 LOL, too much query. But don't worry, EF has a super cool feature to help you query as normal. Let's see how.
 
 I'll create entity configuration for all entity:
 
-```cs
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
-public class ProductConfiguration : IEntityTypeConfiguration<Product>
-{
-    public void Configure(EntityTypeBuilder<Product> builder)
-    {
-        // default query
-        builder.HasQueryFilter(x => x.DeletedAt == null);
-
-        // add more config, for example the relationship
-        builder.HasOne(x => x.Category)
-            .WithMany(x => x.Products)
-            .HasForeignKey(x => x.CategoryId);
-    }
-}
-```
+<script src="https://gist.github.com/oclockvn/42e704c8da91c0b40bbacfb0ee15b011.js"></script>
 
 `IEntityTypeConfiguration` is new interface in EF Core to build fluent configuration for entity. With `HasQueryFilter` EF with generates query with a default filter:
 
-```sql
-SELECT TOP(1) [x].[Id], [x].[Name]
-FROM [Product] AS [x]
-WHERE [x].[DeletedAt] IS NULL AND ([x].[Id] = @__id_0) -- deleted at is null
-ORDER BY [x].[Id]
-```
+<script src="https://gist.github.com/oclockvn/5fb4ea3f34b2dc042faeb80c264a94e6.js"></script>
 
 To apply this config, add it in `OnModelCreating` in db context:
 
-```cs
-public class ApplicationDbContext : DbContext
-{
-    public DbSet<Product> Products { get; set; }
-    public DbSet<Category> Categories { get; set; }
-
-    // override model creating and apply configuration here
-    protected override void OnModelCreating(ModelBuilder builder)
-    {
-        builder.ApplyConfiguration(new ProductConfiguration());
-    }
-}
-```
+<script src="https://gist.github.com/oclockvn/2618a7ee71db92c71ce2d5da50bc3b85.js"></script>
 
 now your query is much more simple:
 
-```cs
-public async Task<List<Product>> GetProducts...Async(string categoryName)
-{
-    return await db.Products
-        .Include(p => p.Category)
-        .Where(p => /*p.DeletedAt == null && x.Category.Deleted == null &&*/ x.Category.Name == categoryName) // no need to check DeletedAt
-        .ToListAsync();
-}
-```
+<script src="https://gist.github.com/oclockvn/a39f26d3af3f7fcdd9315e11338af118.js"></script>
 
 ### How to soft delete?
 
 Just set `DeletedAt` not null, so we no longer use delete query anymore:
 
-```cs
-public class ProductService
-{
-    private readonly ApplicationDbContext db;
-
-    public async Task DeleteProduct(int productId)
-    {
-        var product = db.Products.Find(productId);
-
-        product.DeletedAt = DateTime.Now; // just update the deleted at
-        await db.SaveChangesAsync();
-    }
-}
-```
+<script src="https://gist.github.com/oclockvn/a1ad16b019820a7b3436abc005e04647.js"></script>
 
 That's all. In next post I'll show you more things like how to unapply the default filter, combining with repository pattern for less code..etc. Stay tuned.
 
