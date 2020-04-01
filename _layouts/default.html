@@ -1,44 +1,48 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="oclockvn">
 
-    <link rel="stylesheet" href="{{ '/css/highlighter.css' | relative_url }}" />    
-    <link rel="stylesheet" href="{{ '/css/bootstrap-reboot.min.css' | relative_url }}" />
-    <link rel="stylesheet" href="{{ '/css/bootstrap-grid.min.css' | relative_url }}" />
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="oclockvn">
 
-    <title>PTQ | {{ page.title }}</title>
-    {% if jekyll.environment == 'production' %}
-    {% include analytics.html %}
-    {% endif %}
+  <link rel="stylesheet" href="{{ '/css/highlighter.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/css/bootstrap-reboot.min.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/css/bootstrap-grid.min.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
 
-    {% seo %}
-  </head>
-  <body data-mode="{{ jekyll.environment }}">
+  <title>PTQ | {{ page.title }}</title>
+  {% if jekyll.environment == 'production' %}
+  {% include analytics.html %}
+  {% endif %}
 
-    <header class="header">
+  {% seo %}
+</head>
 
-      <nav class="nav center">
-        <a href="{{ site.url }}" class="brand">{{ site.title }}</a>
-      </nav>
+<body data-mode="{{ jekyll.environment }}">
 
-    </header>
+  <header class="header">
 
-    <main class="main">
-      {{ content }}
-    </main>
+    <nav class="nav center">
+      <a href="{{ site.url }}" class="brand">{{ site.title }}</a>
+    </nav>
 
-    <footer class="footer">
-      <div class="center">&#64; 2019 <a href="{{ site.url }}">{{ site.title }}</a>. <i class="contact-me">Wanna connect? Hit F12</i></div>
-    </footer>
+  </header>
 
-    {% if jekyll.environment == 'development' %}
-    <img class="development-build" src="{{ '/assets/img/edge_badge.png' | relative_url }}" alt="Edge badge" />
-    {% endif %}
+  <main class="main">
+    {{ content }}
+  </main>
 
-    <script src="{{ '/js/app.js' | relative_url }}"></script>
-  </body>
+  <footer class="footer">
+    <div class="center">&#64; 2019 <a href="{{ site.url }}">{{ site.title }}</a>. <span class="contact-me">Wanna
+        connect? Hit F12</span></div>
+  </footer>
+
+  {% if jekyll.environment == 'development' %}
+  <img class="development-build" src="{{ '/assets/img/edge_badge.png' | relative_url }}" alt="Edge badge" />
+  {% endif %}
+
+  <script src="{{ '/js/app.js' | relative_url }}"></script>
+</body>
+
 </html>
