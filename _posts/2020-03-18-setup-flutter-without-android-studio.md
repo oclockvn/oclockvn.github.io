@@ -1,5 +1,5 @@
 ---
-title: [Quick note] Setup Flutter without Android Studio
+title: Setup Flutter without Android Studio
 tags: ["flutter"]
 description: Setup Flutter without Android Studio
 ---
