@@ -101,6 +101,12 @@ body {
   a {
     display: block;
     padding: 2px 8px;
+    text-decoration: none !important;
+
+    &:hover {
+      background: $link-color;
+      color: #fff;
+    }
   }
 
   @media screen and (max-width: 768px) {

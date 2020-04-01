@@ -1,12 +1,14 @@
 function buildQuickJump() {
   const title = document.querySelectorAll('.content-inner.oclockvn > h3');
-  const list = [...title].map(t => `<a href='#${t.id}'>${t.innerText}</a>`).join("");
+  let list = [...title].map(t => `<a href='#${t.id}'>${t.innerText}</a>`).join("");
 
   if (list == null || list.length == 0) {
     return;
   }
 
   const quickJump = document.getElementById('quick-jump');
+  list = `<a href='#'>&uarr;&uarr;&uarr;</a>` + list;
+
   if (quickJump != null) {
     quickJump.innerHTML = list;
   }
