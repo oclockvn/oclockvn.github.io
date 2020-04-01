@@ -1,13 +1,20 @@
 ---
 ---
 
-$link-color: #007bff;
+$link-color: #7e57c2;
 $fade-dark: rgba(0, 0, 0, 0.4);
 $dark: #212121;
+$fs_title: 1.25rem;
+$tc_title: #000;
+$tc_code: #e83e8c;
+$bg_code: rgba(232, 62, 140, 0.05);
+$tc_blockquote: #e83e8c;
+$width: 680px;
+$width_meta_date: 100px;
 
 %center {
   display: block;
-  max-width: 520px;
+  max-width: $width;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1em;
@@ -40,23 +47,20 @@ body {
     text-decoration: none;
 
     &:hover {
-      color: #fff;
-      background-color: #000;
+      color: $link-color;
     }
   }
 }
 
 .post-entry {
-  padding: 2em 0;
+  padding: 1em 0;
   display: block;
   text-decoration: none;
+  transition: background .4s ease-out;
 
   &:hover {
     text-decoration: none;
-
-    // .post__link {
-    //     color: $link-color;
-    // }
+    background: linear-gradient(45deg, #eee, #fff, #eee);
   }
 
   +.post-entry {
@@ -65,25 +69,26 @@ body {
 
   .post__date {
     font-size: .8em;
-    color: $fade-dark;
   }
 
   .post__link {
     display: inline-block;
-    font-size: 1.5rem;
-    color: #000;
+    font-size: $fs_title;
+    color: $tc_title;
     text-decoration: none;
     word-break: break-all;
     word-break: break-word;
+    transition: color .3s ease-in-out;
 
     &:hover {
-      color: #fff;
-      background: #000;
+      color: $link-color;
     }
   }
 
   .entry-title {
     margin: .25rem 0;
+    font-weight: 500;
+    flex: 1;
   }
 }
 
@@ -98,32 +103,50 @@ body {
   a {
     display: block;
     padding: 2px 8px;
+    text-decoration: none !important;
+
+    &:hover {
+      background: $link-color;
+      color: #fff;
+    }
   }
 
   @media screen and (max-width: 768px) {
-    display: none;    
+    display: none;
   }
 }
 
 .post__content {
-  // margin-left: auto;
-  // margin-right: auto;
-  // padding: 2em 0 0;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 
   .content-inner {
-    max-width: 520px;
-    min-width: 520px;
-    // margin-left: auto;
-    // margin-right: auto;
+    max-width: $width;
+    min-width: $width;
 
     @media screen and (max-width: 768px) {
       min-width: 0;
       max-width: 100%;
       flex: 1;
     }
+  }
+
+  a {
+    color: $link-color;
+    text-decoration: underline;
+  }
+
+  code {
+    display: inline-block;
+    background: #fff;
+    color: $tc_code;
+    background: $bg_code;
+    font-size: 1rem;
+    font-size: .8rem;
+    line-height: 0.9rem;
+    border-radius: 0;
+    border: 1px solid hsl(332, 79%, 80%);
   }
 }
 
@@ -134,27 +157,27 @@ body {
 }
 
 pre {
-  padding: 1rem;
-  font-size: .9em;
-  background-color: #212121;
   color: #fff;
+  width: calc(100% - 2rem);
+  margin: 1rem auto;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  code {
+    padding: 1rem;
+    border-left: 3px solid !important;
   }
 }
 
 code {
   font-family: consolas;
   font-size: .9em;
-  background: #212121;
-  color: #fff;
   padding: 2px 4px;
-  border-radius: 2px;
 
   a {
     color: #fff;
-    // text-decoration: none;
   }
 }
 
@@ -220,6 +243,7 @@ code {
   img {
     border: 1px solid rgba(0, 0, 0, 0.04);
     max-width: 100%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
   }
 }
 
@@ -241,24 +265,18 @@ table {
 }
 
 blockquote {
-  color: #e83e8c;
+  color: $tc_blockquote;
   padding: 1rem;
   padding-left: 1.5rem !important;
-  width: 100%;
-  background: rgba(232, 62, 140, 0.05);
+  background: $bg_code;
   position: relative;
+  border-left: 3px solid;
+  font-size: .9rem;
+  margin: 1rem;
+  width: calc(100% - 2rem);
 
   p:last-child {
     margin: 0;
-  }
-
-  &:before {
-    content: '\275D';
-    float: left;
-    font-size: 3em;
-    position: absolute;
-    left: 0;
-    line-height: 0;
   }
 }
 
@@ -268,8 +286,8 @@ blockquote {
 
 .footer {
   background: $dark;
-  padding: 2em 0;
-  color: #fff;
+  padding: 1em 0;
+  color: #eee;
   font-size: .8rem;
 }
 
@@ -281,7 +299,16 @@ blockquote {
   border: none;
 }
 
+.entry-content {
+  display: flex;
+  align-items: start;
+
+  .entry__meta {
+    width: $width_meta_date;
+    margin-top: 7px;
+  }
+}
+
 @import "icon.scss";
 @import "shared.scss";
-@import "pagination.scss";
 @import "post.scss";

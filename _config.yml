@@ -35,7 +35,6 @@ kramdown:
     disable: true
 plugins:
   - jekyll-feed
-  - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
 excerpt_separator: <!--more-->
@@ -64,5 +63,3 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-paginate: 7
-paginate_path: "/page:num/"
