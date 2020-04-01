@@ -56,9 +56,11 @@ body {
   padding: 1em 0;
   display: block;
   text-decoration: none;
+  transition: background .4s ease-out;
 
   &:hover {
     text-decoration: none;
+    background: linear-gradient(45deg, #eee, #fff, #eee);
   }
 
   +.post-entry {
@@ -155,13 +157,17 @@ body {
 }
 
 pre {
-  padding: 1rem;
-  font-size: .9em;
-  background-color: #212121;
   color: #fff;
+  width: calc(100% - 2rem);
+  margin: 1rem auto;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  code {
+    padding: 1rem;
+    border-left: 3px solid !important;
   }
 }
 
@@ -237,6 +243,7 @@ code {
   img {
     border: 1px solid rgba(0, 0, 0, 0.04);
     max-width: 100%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
   }
 }
 
@@ -280,7 +287,7 @@ blockquote {
 .footer {
   background: $dark;
   padding: 1em 0;
-  color: #fff;
+  color: #eee;
   font-size: .8rem;
 }
 
