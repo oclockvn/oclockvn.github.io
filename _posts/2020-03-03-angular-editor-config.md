@@ -25,6 +25,7 @@ description: Setup vscode editor config for angular project
   "tabWidth": 2,
   "semi": true,
   "singleQuote": false,
-  "bracketSpacing": true
+  "bracketSpacing": true,
+  "arrowParens": "avoid"
 }
 ```
