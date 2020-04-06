@@ -309,6 +309,25 @@ blockquote {
   }
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .navbar {
+    display: flex;
+    align-items: center;
+
+    a {
+      display: block;
+      font-weight: 600;
+      color: #000;
+      text-decoration: none;
+      margin-right: 1rem;
+    }
+  }
+}
+
 @import "icon.scss";
 @import "shared.scss";
 @import "post.scss";

@@ -24,7 +24,12 @@
   <header class="header">
 
     <nav class="nav center">
-      <a href="{{ site.url }}" class="brand">{{ site.title }}</a>
+      <a href="{{ site.url }}" class="brand d-none d-md-block">{{ site.title }}</a>
+      <a href="{{ site.url }}" class="brand d-block d-md-none">QP</a>
+      <div class="navbar">
+        <a href="https://oclockvn.github.io/cv/" target="_blank">CV</a>
+        <a href="https://phantienquang.blogspot.com/" target="_blank">Blogspot</a>
+      </div>
     </nav>
 
   </header>
@@ -35,7 +40,7 @@
 
   <footer class="footer">
     <div class="center">&#64; 2019 <a href="{{ site.url }}">{{ site.title }}</a>. <span class="contact-me">Wanna
-        connect? Hit F12</span></div>
+        connect? Hit F12</span> or <a href="https://oclockvn.github.io/cv/" target="_blank">check out my cv</a>.</div>
   </footer>
 
   {% if jekyll.environment == 'development' %}
