@@ -9,21 +9,21 @@ layout: default
       <i>—</i><time datetime="{{ page.date }}" class="timeago">{{ page.date | date_to_string }}</time>
     </div>
   </div>
-  
+
   <div class="post__content">
     <div class="content-inner oclockvn">
       {{ content }}
     </div>
     <div id="quick-jump" class="quick-jump"></div>
   </div>
-  
+
   <div class="post__share">
     <h4 class="share__title">Share This</h4>
     <div class="share__links">
       {% include shared.html %}
     </div>
   </div>
-  
+
   {% unless page.disable_comment %}
   <div class="post__comment">
     <div class="center">
