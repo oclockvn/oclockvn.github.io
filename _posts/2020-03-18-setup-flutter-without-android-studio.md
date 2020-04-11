@@ -100,6 +100,8 @@ Other commands:
 - Delete existed virtual emulator: `avdmanager delete avd -n nexus`
 - List all already created virtual emulators: `avdmanager list avd`
 
+In case you encounter issue, check this [guide](https://github.com/oclockvn/oclockvn.github.io/issues/34)
+
 ### 7. Check all issues
 
 ```
