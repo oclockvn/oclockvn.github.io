@@ -27,4 +27,6 @@ Open `package.json`
 "rxjs": "6.3.2" # removed the `^` mark
 ```
 
+Or basically get rid of current version, upgrade to newer version will fix it.
+
 Then update packages and run again!
