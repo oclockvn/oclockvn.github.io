@@ -52,6 +52,7 @@ then extract to `D:\android\sdk\`, there will be a `tools` folder, set 2 variabl
 ### 4. Download Android SDK
 
 ```
+# sdkmanager --list
 sdkmanager "system-images;android-28;default;x86_64"
 sdkmanager "platform-tools"
 sdkmanager "platforms;android-28"
