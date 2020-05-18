@@ -1,7 +1,7 @@
 ---
 title: .editorconfig for Visual Studio
 tags: ["editorconfig", "visualstudio"]
-description: .editorconfig for Visual Studio 
+description: .editorconfig for Visual Studio
 ---
 
 ### Generate .editorconfig
