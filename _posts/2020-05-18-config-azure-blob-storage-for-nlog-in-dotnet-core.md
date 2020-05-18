@@ -51,7 +51,7 @@ A typical `nlog.config` for azure blob storage looks like below:
 
 The only problem you might encounter while setting it up is the connection string. Here is the correct way:
 
-1. Create the container coressponding in your `nlog.config`, in this case is `logs` container
+1. Create the container corresponding in your `nlog.config`, in this case is `logs` container
 2. Open Azure Storage Explorer then R-Click into the blob container > Copy Blob Container. It's a json object.
 3. Copy the `connectionString`'s value from the info above.
 4. Replace `&` by `&amp` in the connection string above, you can use notepad/notepad++ or whatever your fav editor to do that.
@@ -59,7 +59,7 @@ The only problem you might encounter while setting it up is the connection strin
 
 Notes:
 - You can config the `internalLogFile` to catch the fallback log when your setting is incorrect
-- By combining with `throwConfigExceptions` nlog will tell you if your setting has problem.
+- By combining with `throwConfigExceptions` nlog will tell you if your setting has a problem.
 
 So if your connection string is:
 
