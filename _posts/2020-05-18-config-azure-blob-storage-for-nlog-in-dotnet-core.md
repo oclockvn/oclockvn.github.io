@@ -54,7 +54,7 @@ The only problem you might encounter while setting it up is the connection strin
 1. Create the container corresponding in your `nlog.config`, in this case is `logs` container
 2. Open Azure Storage Explorer then R-Click into the blob container > Copy Blob Container. It's a json object.
 3. Copy the `connectionString`'s value from the info above.
-4. Replace `&` by `&amp` in the connection string above, you can use notepad/notepad++ or whatever your fav editor to do that.
+4. Replace `&` by `&amp;` in the connection string above, you can use notepad/notepad++ or whatever your fav editor to do that.
 5. Put in the `connectionString` in the nlog config and you're good to go.
 
 Notes:
