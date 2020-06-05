@@ -13,11 +13,12 @@ Tuy rằng đã biết tới [VIM](https://en.wikipedia.org/wiki/Vim_(text_edito
 Không sử dụng VIM để code nhưng mình chắc các bạn chí ít cũng đã từng đụng tới nó, cụ thể như:
 - git, chắc hẳn bạn đã từng google how to exit git message screen 😂
 - [vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en), thường thì những ai đã dùng vim thì mới dùng cái này, nhưng cũng có các trường hợp ngược lại. Nếu bạn chưa thử thì nó cũng đáng để thử lắm.
-- gmail shortcuts, nếu bạn hay dùng shortcut của gmail thì bạn sẽ thấy kha khác các phím tắt giống với vim. Còn nếu chưa? hãy enable gmail shortcut liền đi
+- gmail shortcuts, nếu bạn hay dùng shortcut của gmail thì bạn sẽ thấy kha khác các phím tắt giống với vim. Còn nếu chưa? hãy enable gmail shortcut liền đi.
 
 Đôi chút về bản thân để các bạn thấy sự tương đồng:
 - Windows user
 - visual studio, vscode, linqpad, chrome
+- prefer git bash, cmder, thường xuyên sử dụng command line
 
 ### Setup
 
@@ -27,7 +28,7 @@ Các projects của mình đa số là chỉ cần dùng [vs](https://visualstud
 - Ở vscode thì xài [neovim](https://marketplace.visualstudio.com/items?itemName=asvetliakov.vscode-neovim) (NOTE: cái này nhanh hơn và không bị lag như [vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim))
 - Nếu xài [linqpad](https://www.linqpad.net/) thì có thể [enable vim mode](https://forum.linqpad.net/discussion/1427/vi-mode-experimental-build)
 - Cài thêm [vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en) ở chrome hoặc Edge để quen tay với vim shotcuts
-- pin cái vim [cheat sheet](https://vim.rtorr.com/) này lại để tra cứu khi mới làm quen.
+- pin cái [vim cheat sheet](https://vim.rtorr.com/) này lại để tra cứu khi mới làm quen.
 
 Như vậy là bạn đi đâu cũng thấy vim rồi đó.
 
@@ -49,20 +50,20 @@ Thực tế bạn không cần thiết phải sử dụng 10 ngón (mình chỉ 
 
 Vim có rất nhiều lệnh, thực tế khi sử dụng thì mình chỉ dùng những lệnh cơ bản nhất của nó, đến khi có 1 nhu cầu nhất định thì bạn mới cần search và thực hành command cụ thể. Do đó hãy cứ bắt đầu bằng những thứ cơ bản trước:
 
-- vim có 3 mode cơ bản là normal mode (bạn di chuyển con trỏ), edit mode (thêm text) và visual mode (mark text)
+Vim có 3 mode cơ bản là **normal mode** (movement - bạn di chuyển con trỏ), **edit mode** (insert - thêm text) và **visual mode** (marking text)
 
-**Ở normal mode**: bạn có thể di chuyển cursor và mark text, cũng như yank (copy) và delete text
-  - di chuyển bằng các phím `h, j, k, l` tương ứng với left ⬅, down ⬇, up ⬆, right ➡. Cũng như mọi người thì mình khuyên là nên dùng phím hjkl
-- `a` để append, `i` để insert, `c` để change, `x` để xóa và `d` để xóa marked text (`a` và `i` sẽ chuyển từ normal mode sang edit mode)
-- `y` để copy (yank) và `p` để dán (paste), `yy` để duplicate line
-- `w` để go to next word, `e` để go to end of word, `b` để go back to start of word
-- `^` để go to first charactor of sentense, `$` để go to last charator of sentense (giống regex)
-- `gg` để di chuyển về đầu trang, `G` để di chuyển tới cuối trang
+**> Ở normal mode**: bạn có thể di chuyển cursor và marking text, cũng như yank (copy) và delete text
+  - di chuyển bằng các phím `h, j, k, l` tương ứng với left ⬅, down ⬇, up ⬆, right ➡. Cũng như mọi người thì mình khuyên là nên dùng phím `hjkl`.
+- `a` để append, `i` để insert, `c` để change, `x` để xóa và `d` để xóa marked text (`a` và `i` sẽ chuyển từ normal mode sang edit mode).
+- `y` để copy (yank) và `p` để dán (paste), `yy` để duplicate line.
+- `w` để go to next word, `e` để go to end of word, `b` để go back to start of word.
+- `^` để go to first charactor of the sentense, `$` để go to last charator of the sentense (giống regex).
+- `gg` để di chuyển về đầu trang, `G` để di chuyển tới cuối trang.
 - `f` + {any charactor} để jump to that charactor, `t` + {charactor} để jump to before that charactor.
 
-**Ở edit mode**: bạn gõ như bình thường và `esc` để quay lại normal mode.
+**> Ở edit mode**: bạn gõ như bình thường và `esc` để quay lại normal mode.
 
-**Chuyển sang visual mode** từ normal mode bằng `v` hoặc `V` (whole line)
+**> Chuyển sang visual mode** từ normal mode bằng `v` hoặc `V` (whole line)
 
 Các command với file như `:q` (quit) hoặc `:w` (write) ... vì ít dùng nên bạn có thể tham khảo ở cheat sheet.
 
@@ -80,6 +81,7 @@ Bạn cũng cần 1 - 2 tuần để làm quen với những command này và s�
 - paste after = `p` then paste before = `P`
 - delete (`d`) until end of line (`$`) --> `d$`
 - mark (`V`) to end of page (`G`) --> `VG`
+- many more...
 
 Ví dụ bạn có 1 đoạn code sau:
 
