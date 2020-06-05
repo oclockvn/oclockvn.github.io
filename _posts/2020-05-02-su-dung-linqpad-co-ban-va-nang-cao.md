@@ -1,6 +1,7 @@
 ---
 title: Sử dụng linqpad cơ bản và nâng cao
 tags: ["linqpad"]
+description: Sử dụng linqpad cơ bản và nâng cao
 ---
 
 ### Linqpad là gì?
