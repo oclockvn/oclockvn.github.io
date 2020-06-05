@@ -95,4 +95,8 @@ con trỏ đang ở đầu dòng, bạn đang ở normal mode (default).
 
 Có vẻ khó nhớ? Tất nhiên, bạn phải xài thì bạn sẽ không quên đâu, giống như khi đã biết cách đi xe đạp thì sẽ không bao giờ quên vậy.
 
+Check out the demo below:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5540o2SJ97w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Enjoy!
