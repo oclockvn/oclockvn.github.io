@@ -8,7 +8,7 @@ description: Remove SoftEther VPN client manager Administrator password
 
 I had some things need to setup vpn and I chose [SoftEther vpn](https://www.softether.org/). I will not mention the reason about why I chose it but the stupid issue I faced when start in for the first time.
 
-![It requires password](assets/img/softether-vpn.png)
+![It requires password](\assets\img\softether-vpn.png)
 
 WTF? It requires password for the first time even I didn't do anything? I google for few minutes but still got nothing.
 
