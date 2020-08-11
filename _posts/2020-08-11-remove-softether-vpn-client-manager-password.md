@@ -1,8 +1,7 @@
-
 ---
 title: Remove Softether vpn client manager Administrator password
 author: Quang Phan
-tags: ["vpn"]
+tags: [vpn]
 description: Remove SoftEther VPN client manager Administrator password
 ---
 
