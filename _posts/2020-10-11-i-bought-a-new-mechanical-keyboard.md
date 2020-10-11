@@ -6,7 +6,7 @@ description: I bought a new mechanical keyboard
 
 > Just a show off post!
 
-Since the covid-19 started and I worked from home, I started to practice touch typing. Actually, the reason behind that was I wanted to use [vim](https://oclockvn.github.io/2020/06/05/faster-coding-with-vim.html), till now I've been using vim a lot.
+Since the covid-19 started and I had to work from home, I started to practice touch typing. Actually, the reason behind that was I wanted to use [vim](https://oclockvn.github.io/2020/06/05/faster-coding-with-vim.html), till now I've been using vim a lot.
 
 I feel really excited when I use vim better day by day, but then I faced an issue, that was my fingers start to hurt. You know, when you use all your fingers to typing, especially for the developer, your pinky hurts so badly since you use the characters like (),./;'[]{} plenty of times, basically almost the keys in the right side. And I still used the cheap keyboard 200k.
 
