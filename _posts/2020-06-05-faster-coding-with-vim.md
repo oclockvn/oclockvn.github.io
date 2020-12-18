@@ -57,9 +57,9 @@ Vim có 3 mode cơ bản là **normal mode** (movement - bạn di chuyển con t
 - `a` để append, `i` để insert, `c` để change, `x` để xóa và `d` để xóa marked text (`a` và `i` sẽ chuyển từ normal mode sang edit mode).
 - `y` để copy (yank) và `p` để dán (paste), `yy` để duplicate line.
 - `w` để go to next word, `e` để go to end of word, `b` để go back to start of word.
-- `^` để go to first charactor of the sentense, `$` để go to last charator of the sentense (giống regex).
+- `^` để go to first character of the sentense, `$` để go to last charator of the sentense (giống regex).
 - `gg` để di chuyển về đầu trang, `G` để di chuyển tới cuối trang.
-- `f` + {any charactor} để jump to that charactor, `t` + {charactor} để jump to before that charactor.
+- `f` + {any character} để jump to that character, `t` + {character} để jump to before that character.
 
 **> Ở edit mode**: bạn gõ như bình thường và `esc` để quay lại normal mode.
 
