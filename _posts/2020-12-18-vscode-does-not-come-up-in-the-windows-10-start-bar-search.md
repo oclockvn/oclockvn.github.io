@@ -5,7 +5,7 @@ tags: [vscode]
 description: Visual Studio Code doesn't come up in the Windows 10 start bar search
 ---
 
-Solution: Add vscode to Start Menu folder.
+### Solution: Add vscode to Start Menu folder.
 
 ### Why does this happen?
 
@@ -26,12 +26,14 @@ Maybe because one of these:
 
 This works for everything, so if you want to have any programs show up in start menu, or you want to able to search it in search, do this (video at the end).
 
-1. Open the start menu folder
+#### 1. Open the start menu folder
 
 Normally it's located in `%appdata%\Microsoft\Windows\Start Menu\Programs`, so just copy and paste it into Windows Run (Windows + R)
 
-2. Add shortcut to vscode
+#### 2. Add shortcut to vscode
 
 R-click > New > Shortcut and browse to vscode folder, normally it's located in `%appdata%\..\Local\Programs\Microsoft VS Code`, pick `Code.exe`, name it `Visual Studio Code` or whatever name you want.
 
-3. All done, now you're able to search vscode in the start menu search.
+#### 3. All done, now you're able to search vscode in the start menu search.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1y-0GXKUlkg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
