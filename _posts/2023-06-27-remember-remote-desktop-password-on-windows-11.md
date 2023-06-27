@@ -13,6 +13,8 @@ Windows 11 doesn't save password of your remote desktop connection even you chec
 
 You may found few articles on google, this is yet another one but I tried it and it works, so if it doesn't work for you, keep searching :)
 
+Open cmd (better use powershell in Admin mode)
+
 ```
 cmdkey /generic:TERMSRV/<targetname> /user:<username> /pass:<password>
 ```
