@@ -21,6 +21,9 @@ $width_meta_date: 100px;
   padding-right: 1em;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   min-height: 100vh;
