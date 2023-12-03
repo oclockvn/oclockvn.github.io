@@ -36,9 +36,9 @@ Như vậy là bạn đi đâu cũng thấy vim rồi đó.
 
 Giai đoạn chán nản mà không phải ai cũng dễ vượt qua.
 
-Mình không biết những người khác khi dùng vim thì họ có gõ 10 ngón hay không, nhưng bản thân mình ngay khi có ý định dùng vim thì mình đã tập thói quen gõ 10 ngón. Bạn có thể vào đầy https://typingclub.com/ hoặc đây https://www.typing.academy/ để luyện tập gõ 10 ngón trước, khi đó tốc độ xài vim của bạn sẽ nhanh hơn đáng kể.
+Mình không biết những người khác khi dùng vim thì họ có gõ 10 ngón hay không, nhưng bản thân mình ngay khi có ý định dùng vim thì mình đã tập thói quen gõ 10 ngón. Bạn có thể vào đây [https://typingclub.com/](https://typingclub.com/) hoặc đây [https://www.typing.academy/](https://typingclub.com/) để luyện tập gõ 10 ngón trước, khi đó tốc độ xài vim của bạn sẽ nhanh hơn đáng kể.
 
-Nếu bạn chưa từng gõ 10 ngón mà chỉ gõ theo thói quen, bạn cần 1 khoảng thời gian để cơ tay bạn quen dần. Mình đã quen dần với trong khoảng 3 tuần.
+Nếu bạn chưa từng gõ 10 ngón mà chỉ gõ theo thói quen, bạn cần 1 khoảng thời gian để cơ tay bạn quen dần. Mình đã quen dần với nó trong khoảng 3 tuần.
 
 Trong thời gian làm quen, bạn hãy cố gắng gõ chính xác thay vì nhanh, đồng thời đặt tay đúng vị trí để khỏi bị sai sau khi tay đã quen (giống như khi bạn tập viết, 1 khi đã quen với cách cầm bút thì khó mà đổi được).
 
@@ -57,7 +57,7 @@ Vim có 3 mode cơ bản là **normal mode** (movement - bạn di chuyển con t
 - `a` để append, `i` để insert, `c` để change, `x` để xóa và `d` để xóa marked text (`a` và `i` sẽ chuyển từ normal mode sang edit mode).
 - `y` để copy (yank) và `p` để dán (paste), `yy` để duplicate line.
 - `w` để go to next word, `e` để go to end of word, `b` để go back to start of word.
-- `^` để go to first character of the sentense, `$` để go to last charator of the sentense (giống regex).
+- `^` để go to first character of the sentense, `$` để go to last character of the sentense (giống regex).
 - `gg` để di chuyển về đầu trang, `G` để di chuyển tới cuối trang.
 - `f` + {any character} để jump to that character, `t` + {character} để jump to before that character.
 
@@ -91,7 +91,7 @@ Ví dụ bạn có 1 đoạn code sau:
 con trỏ đang ở đầu dòng, bạn đang ở normal mode (default).
 
 1. Bạn muốn đi tới cuối dòng: `$` (hoặc `g_` để không include endline)
-2. Bạn muốn sửa text: `f"ci"` = go to " (`f"`) then change inner " (`ci"`), lúc đó bạn sẽ ở edit mode và con trỏ của bạn sẽ ở ngay `const post = "|";`
+2. Bạn muốn sửa text: `f"ci"` = first go to `"` (`f"`), then change inner quote " (`ci"`), lúc đó bạn sẽ ở edit mode và con trỏ của bạn sẽ ở ngay giữa 2 dấu " `const post = "|";`
 
 Có vẻ khó nhớ? Tất nhiên, bạn phải xài thì bạn sẽ không quên đâu, giống như khi đã biết cách đi xe đạp thì sẽ không bao giờ quên vậy.
 
