@@ -35,7 +35,7 @@ InternetOpenUrl() failed.
 - First of all, try to update winget to the latest version, you can download from Microsoft Store or use below command:
 
 ```
-winget install "App Installer" -s msstore --force
+winget install -e --id Microsoft.AppInstaller [-s msstore --force]
 ```
 
 Check the [discussion](https://github.com/microsoft/winget-cli/issues/3652) for more ways.
