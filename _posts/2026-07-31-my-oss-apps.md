@@ -11,3 +11,5 @@ description: OSS ideas and products
 - [ ] SolutionMapper: mapping between legacy and new projects and open it in diff tool
 - [ ] Nuup: Update nuget packages in solution
 - [x] onlinebot: @oclockvn/onlinebot
+- [x] [git ls-tree](https://oclockvn.github.io/git-ls-tree/): turn git ls-files output into ascii tree
+- [x] [business calculator](https://oclockvn.github.io/business-diff-calculator/): gen sql command of date-diff 
