@@ -16,4 +16,4 @@ description: OSS ideas and products
 - [x] [code-snippet](https://github.com/oclockvn/code-snippet): save and manage reusable code snippets
 - [x] [stack-timer](https://github.com/oclockvn/stack-timer): stackable countdown timer app
 - [x] [boxing_timer](https://github.com/oclockvn/boxing_timer): round-based timer for boxing/workout sessions
-- [x] [context-bulk-extension](https://github.com/oclockvn/context-bulk-extension): browser extension for bulk context actions
+- [x] [context-bulk-extension](https://github.com/oclockvn/context-bulk-extension): EF Core bulk insert/upsert extension (SQL Server, PostgreSQL)
